@@ -20,9 +20,10 @@ static char *colors[][3]      = {
 	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
 	[SchemeSel]  = { selfgcolor, selbgcolor,  selbordercolor  },
 	[SchemeUrg]  = { normfgcolor, normbgcolor,  col_urgborder  },
+};
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
-};
+
 static const unsigned int alphas[][3]      = {
     /*               fg      bg        border*/
     [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
