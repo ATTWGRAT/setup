@@ -1,0 +1,118 @@
+cc -c -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os -I/usr/X11R6/include -I/usr/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION=\"6.4\" -DXINERAMA dwm.c
+dwm.c: In function ‘loadxrdb’:
+dwm.c:1083:48: warning: passing argument 1 of ‘strncpy’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1083 |         XRDB_LOAD_COLOR("dwm.normbordercolor", normbordercolor);
+      |                                                ^~~~~~~~~~~~~~~
+dwm.c:70:47: note: in definition of macro ‘XRDB_LOAD_COLOR’
+   70 |                                       strncpy(V, value.addr, 7); \
+      |                                               ^
+In file included from dwm.c:29:
+/usr/include/string.h:144:40: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+  144 | extern char *strncpy (char *__restrict __dest,
+      |                       ~~~~~~~~~~~~~~~~~^~~~~~
+dwm.c:71:44: error: assignment of read-only location ‘normbordercolor[7]’
+   71 |                                       V[7] = '\0'; \
+      |                                            ^
+dwm.c:1083:9: note: in expansion of macro ‘XRDB_LOAD_COLOR’
+ 1083 |         XRDB_LOAD_COLOR("dwm.normbordercolor", normbordercolor);
+      |         ^~~~~~~~~~~~~~~
+dwm.c:1084:44: warning: passing argument 1 of ‘strncpy’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1084 |         XRDB_LOAD_COLOR("dwm.normbgcolor", normbgcolor);
+      |                                            ^~~~~~~~~~~
+dwm.c:70:47: note: in definition of macro ‘XRDB_LOAD_COLOR’
+   70 |                                       strncpy(V, value.addr, 7); \
+      |                                               ^
+/usr/include/string.h:144:40: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+  144 | extern char *strncpy (char *__restrict __dest,
+      |                       ~~~~~~~~~~~~~~~~~^~~~~~
+dwm.c:71:44: error: assignment of read-only location ‘normbgcolor[7]’
+   71 |                                       V[7] = '\0'; \
+      |                                            ^
+dwm.c:1084:9: note: in expansion of macro ‘XRDB_LOAD_COLOR’
+ 1084 |         XRDB_LOAD_COLOR("dwm.normbgcolor", normbgcolor);
+      |         ^~~~~~~~~~~~~~~
+dwm.c:1085:44: warning: passing argument 1 of ‘strncpy’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1085 |         XRDB_LOAD_COLOR("dwm.normfgcolor", normfgcolor);
+      |                                            ^~~~~~~~~~~
+dwm.c:70:47: note: in definition of macro ‘XRDB_LOAD_COLOR’
+   70 |                                       strncpy(V, value.addr, 7); \
+      |                                               ^
+/usr/include/string.h:144:40: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+  144 | extern char *strncpy (char *__restrict __dest,
+      |                       ~~~~~~~~~~~~~~~~~^~~~~~
+dwm.c:71:44: error: assignment of read-only location ‘normfgcolor[7]’
+   71 |                                       V[7] = '\0'; \
+      |                                            ^
+dwm.c:1085:9: note: in expansion of macro ‘XRDB_LOAD_COLOR’
+ 1085 |         XRDB_LOAD_COLOR("dwm.normfgcolor", normfgcolor);
+      |         ^~~~~~~~~~~~~~~
+dwm.c:1086:47: warning: passing argument 1 of ‘strncpy’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1086 |         XRDB_LOAD_COLOR("dwm.selbordercolor", selbordercolor);
+      |                                               ^~~~~~~~~~~~~~
+dwm.c:70:47: note: in definition of macro ‘XRDB_LOAD_COLOR’
+   70 |                                       strncpy(V, value.addr, 7); \
+      |                                               ^
+/usr/include/string.h:144:40: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+  144 | extern char *strncpy (char *__restrict __dest,
+      |                       ~~~~~~~~~~~~~~~~~^~~~~~
+dwm.c:71:44: error: assignment of read-only location ‘selbordercolor[7]’
+   71 |                                       V[7] = '\0'; \
+      |                                            ^
+dwm.c:1086:9: note: in expansion of macro ‘XRDB_LOAD_COLOR’
+ 1086 |         XRDB_LOAD_COLOR("dwm.selbordercolor", selbordercolor);
+      |         ^~~~~~~~~~~~~~~
+dwm.c:1087:43: warning: passing argument 1 of ‘strncpy’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1087 |         XRDB_LOAD_COLOR("dwm.selbgcolor", selbgcolor);
+      |                                           ^~~~~~~~~~
+dwm.c:70:47: note: in definition of macro ‘XRDB_LOAD_COLOR’
+   70 |                                       strncpy(V, value.addr, 7); \
+      |                                               ^
+/usr/include/string.h:144:40: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+  144 | extern char *strncpy (char *__restrict __dest,
+      |                       ~~~~~~~~~~~~~~~~~^~~~~~
+dwm.c:71:44: error: assignment of read-only location ‘selbgcolor[7]’
+   71 |                                       V[7] = '\0'; \
+      |                                            ^
+dwm.c:1087:9: note: in expansion of macro ‘XRDB_LOAD_COLOR’
+ 1087 |         XRDB_LOAD_COLOR("dwm.selbgcolor", selbgcolor);
+      |         ^~~~~~~~~~~~~~~
+dwm.c:1088:43: warning: passing argument 1 of ‘strncpy’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1088 |         XRDB_LOAD_COLOR("dwm.selfgcolor", selfgcolor);
+      |                                           ^~~~~~~~~~
+dwm.c:70:47: note: in definition of macro ‘XRDB_LOAD_COLOR’
+   70 |                                       strncpy(V, value.addr, 7); \
+      |                                               ^
+/usr/include/string.h:144:40: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+  144 | extern char *strncpy (char *__restrict __dest,
+      |                       ~~~~~~~~~~~~~~~~~^~~~~~
+dwm.c:71:44: error: assignment of read-only location ‘selfgcolor[7]’
+   71 |                                       V[7] = '\0'; \
+      |                                            ^
+dwm.c:1088:9: note: in expansion of macro ‘XRDB_LOAD_COLOR’
+ 1088 |         XRDB_LOAD_COLOR("dwm.selfgcolor", selfgcolor);
+      |         ^~~~~~~~~~~~~~~
+dwm.c: In function ‘setup’:
+dwm.c:1686:55: warning: passing argument 2 of ‘drw_scm_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1686 |                 scheme[i] = drw_scm_create(drw, colors[i], 3);
+      |                                                 ~~~~~~^~~
+      |                                                       |
+      |                                                       const char **
+In file included from dwm.c:45:
+drw.h:43:37: note: expected ‘char **’ but argument is of type ‘const char **’
+   43 | Clr *drw_scm_create(Drw *drw, char *clrnames[], size_t clrcount);
+      |                               ~~~~~~^~~~~~~~~~
+dwm.c: In function ‘xrdb’:
+dwm.c:2238:55: warning: passing argument 2 of ‘drw_scm_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 2238 |                 scheme[i] = drw_scm_create(drw, colors[i], 3);
+      |                                                 ~~~~~~^~~
+      |                                                       |
+      |                                                       const char **
+drw.h:43:37: note: expected ‘char **’ but argument is of type ‘const char **’
+   43 | Clr *drw_scm_create(Drw *drw, char *clrnames[], size_t clrcount);
+      |                               ~~~~~~^~~~~~~~~~
+In file included from dwm.c:291:
+config.h: At top level:
+config.h:68:20: warning: ‘dmenucmd’ defined but not used [-Wunused-variable]
+   68 | static const char *dmenucmd[] = {"dmenu_run", "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL};
+      |                    ^~~~~~~~
+make: *** [Makefile:12: dwm.o] Error 1

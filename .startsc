@@ -1,0 +1,22 @@
+#!/bin/sh
+
+wall=$(find ~/.wp/ -type f -name "*.jpg" -o -name "*.png" | shuf -n 1)
+
+xwallpaper --zoom $wall
+
+wal -c
+wal -n --backend colorz -i $wall
+
+picom -b --animations
+
+xdotool key Super_L+F5
+
+dwmblocks &
+
+pywal-discord
+
+beautifuldiscord --css /home/ratattwg/.config/BetterDiscord/themes/pywal-discord-default.theme.css
+
+setxkbmap pl
+
+easyeffects --gapplication-service &
